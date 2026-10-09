@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harini M | Pharmaceutical Analysis & Quality Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F7F9;--surface:#fff;--ink:#0E1B2C;--mute:#4A5B6E;--line:#D5E0E7;--teal:#0B7F83;--teal-soft:#DDF1F1;--peak:#0B7F83;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#071D2A;--surface:#122E3E;--ink:#EAF7FF;--mute:#B7C9D4;--line:rgba(122,214,225,.28);--teal:#5ABFD6;--teal-soft:#1B3D4A;--peak:#72D5D1}}
+:root[data-theme="dark"]{--bg:#071D2A;--surface:#122E3E;--ink:#EAF7FF;--mute:#B7C9D4;--line:rgba(122,214,225,.28);--teal:#5ABFD6;--teal-soft:#1B3D4A;--peak:#72D5D1}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:58px}
+.logo{font:700 20px "Bricolage Grotesque",sans-serif;text-decoration:none;margin-right:auto}
+nav a.l{text-decoration:none;color:var(--mute);font-size:15px;font-weight:500}
+nav a.l:hover{color:var(--teal)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:5px 12px;font:500 14px Figtree,sans-serif;cursor:pointer}
+.hero{padding:56px 0 20px;display:grid;grid-template-columns:1fr 230px;gap:36px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.02em}
+.hero p.role{font-size:20px;color:var(--teal);font-weight:600;margin:10px 0 14px}
+.hero p.lead{color:var(--mute);max-width:56ch;margin:0 0 22px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--teal);transition:transform .15s,background .15s}
+.btn.p{background:var(--teal);color:#fff}
+.btn.p:hover{transform:translateY(-2px)}
+.btn.s:hover{background:var(--teal-soft)}
+.photo{width:230px;height:290px;border-radius:120px 120px 22px 22px;object-fit:cover;background:var(--teal-soft);border:1px solid var(--line);display:block}
+.chrom{margin:26px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 18px 14px}
+.chrom svg{width:100%;height:auto;display:block;overflow:visible}
+.ax{stroke:var(--line);stroke-width:1.5}
+.trace{fill:none;stroke:var(--peak);stroke-width:2.6;stroke-linejoin:round;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.6s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pk{cursor:pointer;outline:none}
+.pk circle{fill:var(--surface);stroke:var(--peak);stroke-width:2.5;transition:r .15s,fill .15s}
+.pk text{fill:var(--mute);font:600 13px Figtree,sans-serif;text-anchor:middle}
+.pk:hover circle,.pk:focus-visible circle,.pk.on circle{fill:var(--peak);r:9}
+.pk.on text{fill:var(--ink)}
+#cap{margin:8px 4px 0;min-height:56px;color:var(--mute);font-size:16px}
+#cap b{color:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.hint{font-size:14px;color:var(--mute);margin:10px 4px 0}
+section{padding:68px 0 8px}
+h2{font-size:clamp(28px,4.4vw,40px);margin-bottom:22px}
+.about{max-width:68ch;color:var(--mute);font-size:18px}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 40px}
+.sk div{border-top:2px solid var(--teal);padding:14px 0 22px}
+.sk h3{font-size:19px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--teal-soft);color:var(--ink);padding:5px 12px;border-radius:999px;font-size:14.5px;font-weight:500;transition:background .15s,color .15s}
+.tags span:hover{background:var(--teal);color:#fff}
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+details{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:16px}
+details:before{content:"";position:absolute;left:-37px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px}
+summary::-webkit-details-marker{display:none}
+summary b{font:700 19px "Bricolage Grotesque",sans-serif}
+summary i{font-style:normal;color:var(--teal);font-weight:600;font-size:15px}
+.org{color:var(--mute);font-size:15px;width:100%}
+details ul{margin:12px 0 2px;padding-left:20px;color:var(--mute)}
+details[open]{border-color:var(--teal)}
+.proj{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;background:var(--ink);color:#EAF2F7;border-radius:22px;padding:34px}
+:root[data-theme="dark"] .proj{background:#122E3E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .proj{background:#122E3E}}
+.proj h3{font-size:26px;margin-bottom:12px}
+.proj p{color:#B7C9D8;margin:0 0 10px}
+.steps{display:flex;flex-direction:column;gap:10px}
+.steps button{text-align:left;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#EAF2F7;border-radius:12px;padding:12px 16px;font:600 16px Figtree,sans-serif;cursor:pointer;transition:background .2s}
+.steps button.on{background:#5ABFD6;color:#071D2A;border-color:#5ABFD6}
+#stepinfo{color:#B7C9D8;font-size:15px;margin:4px 2px 0;min-height:48px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.edu article{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.edu h3{font-size:20px}.edu p{margin:6px 0 0;color:var(--mute);font-size:15.5px}
+.edu .big{border-left:5px solid var(--teal)}
+.contact{padding-bottom:70px}
+.contact p{color:var(--mute);max-width:56ch;margin:0 0 20px}
+footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--mute);font-size:14px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.photo{width:170px;height:210px;order:-1}.proj{grid-template-columns:1fr;padding:24px}nav a.l{display:none}}
+@media(prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">Harini M</a>
+<a class="l" href="#skills">Skills</a><a class="l" href="#experience">Experience</a><a class="l" href="#project">Project</a><a class="l" href="#education">Education</a><a class="l" href="#contact">Contact</a>
+<button id="theme" type="button" aria-label="Switch light or dark theme">Theme</button></div></nav>
+
+<main class="wrap" id="top">
+<div class="hero">
+<div>
+<h1>Harini M</h1>
+<p class="role">B.Pharm Graduate | Pharmaceutical Analysis & Quality Control</p>
+<p class="lead">I study how medicines are measured and kept reliable. My final-year work built a green, stability-indicating HPTLC method for dapagliflozin, and my experience runs from hospital pharmacy to a quality control laboratory.</p>
+<div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn s" href="https://www.linkedin.com/in/harini-m-200298442" target="_blank" rel="noopener">View LinkedIn</a></div>
+</div>
+<!-- Replace the src below with your real photo later -->
+<img class="photo" id="profile-photo" alt="Profile photo of Harini M (placeholder)" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 230 290'%3E%3Crect width='230' height='290' fill='%23DDF1F1'/%3E%3Ccircle cx='115' cy='108' r='46' fill='%230B7F83' opacity='.85'/%3E%3Cpath d='M28 290c0-62 38-100 87-100s87 38 87 100z' fill='%230B7F83' opacity='.85'/%3E%3C/svg%3E">
+</div>
+
+<div class="chrom">
+<svg viewBox="0 0 900 215" role="img" aria-label="Interactive chromatogram of Harini's analytical experience">
+<line class="ax" x1="0" y1="170" x2="900" y2="170"/>
+<path class="trace" d="M0,170 L150,170 C174,170 172,75 190,75 C208,75 206,170 230,170 L315,170 C340,170 338,40 360,40 C382,40 380,170 405,170 L525,170 C545,170 544,100 560,100 C576,100 575,170 595,170 L688,170 C712,170 710,60 730,60 C750,60 748,170 772,170 L900,170"/>
+<g class="pk on" tabindex="0" role="button" data-k="0" transform="translate(190,75)"><circle r="7"/><text y="-16">HPLC</text></g>
+<g class="pk" tabindex="0" role="button" data-k="1" transform="translate(360,40)"><circle r="7"/><text y="-16">UV Spectroscopy</text></g>
+<g class="pk" tabindex="0" role="button" data-k="2" transform="translate(560,100)"><circle r="7"/><text y="-16">Dissolution</text></g>
+<g class="pk" tabindex="0" role="button" data-k="3" transform="translate(730,60)"><circle r="7"/><text y="-16">HPTLC</text></g>
+</svg>
+<div id="cap" aria-live="polite"></div>
+<p class="hint">Tap a peak to see where I used each technique.</p>
+</div>
+
+<section id="about"><h2>About me</h2>
+<p class="about">I am a B.Pharm graduate with about two years of hospital pharmacy training and experience, plus hands-on quality control exposure to HPLC, UV spectroscopy, dissolution and disintegration testing under Good Laboratory Practice. I am looking for an entry-level Quality Control, Analytical or Pharmacist role where careful measurement and accurate medication handling matter.</p></section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="sk">
+<div><h3>Analytical techniques</h3><div class="tags"><span>HPLC</span><span>UV Spectroscopy</span><span>HPTLC</span><span>Method Development</span><span>Method Validation</span><span>Stability-Indicating Methods</span></div></div>
+<div><h3>Quality control</h3><div class="tags"><span>Dissolution Testing</span><span>Disintegration Testing</span><span>STP</span><span>QC Documentation</span></div></div>
+<div><h3>Compliance</h3><div class="tags"><span>Good Laboratory Practice</span><span>IQ/OQ/PQ Documentation</span></div></div>
+<div><h3>Pharmacy practice</h3><div class="tags"><span>Prescription Dispensing</span><span>Hospital Pharmacy Operations</span><span>Medication Handling</span><span>Patient Counselling</span></div></div>
+</div></section>
+
+<section id="experience"><h2>Experience</h2>
+<div class="tl">
+<details open><summary><b>B.Pharm Intern, Quality Control</b><i>24 – 30 December 2025</i><span class="org">Trinity Pharmaceuticals & Food Pvt. Ltd., Trichy, Tamil Nadu</span></summary>
+<ul><li>Practical exposure to HPLC and UV spectroscopy used in pharmaceutical analysis</li><li>Observed dissolution and disintegration testing of finished dosage forms</li><li>Learned IQ/OQ/PQ documentation, STP and QC record-keeping</li><li>Followed Good Laboratory Practice in the QC laboratory</li></ul></details>
+<details><summary><b>Pharmacist</b><i>February 2022 – September 2023</i><span class="org">Krishna Hospital, Tiruchengode, Tamil Nadu</span></summary>
+<ul><li>Dispensed prescribed medicines accurately, verifying drug name, strength and dosage</li><li>Handled, stored and issued medications following hospital pharmacy procedures</li><li>Supported patients by explaining medication usage and answering queries</li><li>Coordinated with doctors and nursing staff in daily pharmacy operations</li></ul></details>
+<details><summary><b>Hospital Pharmacy Trainee</b><i>November 2021 – January 2022</i><span class="org">D.Pharm practical training, hospital pharmacy</span></summary>
+<ul><li>Supervised hands-on training in dispensing, medication storage and prescription handling</li><li>Assisted with stock checking and patient support</li></ul></details>
+</div></section>
+
+<section id="project"><h2>Final year project</h2>
+<div class="proj">
+<div><h3>Green stability-indicating HPTLC method for dapagliflozin</h3>
+<p>Department of Pharmaceutical Analysis</p>
+<p>An eco-friendly method for estimating dapagliflozin that can tell the drug apart from its degradation. Choose a stage to see what each part of the work means.</p></div>
+<div class="steps" id="steps">
+<button type="button" class="on" data-i="0">Develop the method</button>
+<button type="button" data-i="1">Validate it</button>
+<button type="button" data-i="2">Show it is stability-indicating</button>
+<div id="stepinfo"></div></div>
+</div></section>
+
+<section id="education"><h2>Education</h2>
+<div class="edu">
+<article class="big"><h3>Bachelor of Pharmacy</h3><p>Sri Ramakrishna Institute of Paramedical Sciences, Coimbatore</p><p>October 2023 – September 2026 (result awaited)</p></article>
+<article><h3>Diploma in Pharmacy</h3><p>Swamy Vivekananda College of Pharmacy, Tiruchengode</p><p>Completed October 2021</p></article>
+<article><h3>Languages</h3><p>Tamil | English</p></article>
+</div></section>
+
+<section id="contact" class="contact"><h2>Let's talk</h2>
+<p>I am open to quality control, pharmaceutical analysis and pharmacist roles. Email is the quickest way to reach me.</p>
+<div class="btns"><a class="btn p" href="mailto:harini19d@gmail.com">harini19d@gmail.com</a><a class="btn s" href="https://www.linkedin.com/in/harini-m-200298442" target="_blank" rel="noopener">LinkedIn profile</a></div></section>
+</main>
+<footer><div class="wrap">Harini M, Namakkal, Tamil Nadu</div></footer>
+
+<script>
+var caps=[["HPLC","Exposure during my quality control internship at Trinity Pharmaceuticals, Trichy."],["UV Spectroscopy","Used in pharmaceutical analysis during the same internship."],["Dissolution and disintegration","Observed testing of finished dosage forms, following STP and GLP."],["HPTLC","The method I developed and validated for my final-year project on dapagliflozin."]];
+var cap=document.getElementById('cap');
+function pick(k){document.querySelectorAll('.pk').forEach(function(g){g.classList.toggle('on',g.dataset.k==k)});cap.innerHTML='<b>'+caps[k][0]+'</b><br>'+caps[k][1]}
+document.querySelectorAll('.pk').forEach(function(g){g.addEventListener('click',function(){pick(g.dataset.k)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(g.dataset.k)}})});
+pick(0);
+var st=["Choosing conditions for an HPTLC method that uses greener, lower-impact solvents to estimate dapagliflozin.","Checking that the method gives reliable, repeatable results for dapagliflozin.","Demonstrating that the method can measure the drug accurately even when it degrades."];
+var si=document.getElementById('stepinfo');
+function step(i){document.querySelectorAll('#steps button').forEach(function(b){b.classList.toggle('on',b.dataset.i==i)});si.textContent=st[i]}
+document.querySelectorAll('#steps button').forEach(function(b){b.addEventListener('click',function(){step(b.dataset.i)})});
+step(0);
+var root=document.documentElement,tb=document.getElementById('theme');
+try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+tb.addEventListener('click',function(){var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='light':matchMedia('(prefers-color-scheme:dark)').matches;var n=dark?'dark':'light';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+</script>
+</body>
+</html>
