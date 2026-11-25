@@ -24,7 +24,12 @@ nav .wrap{display:flex;align-items:center;gap:20px;height:58px}
 .logo{font:700 20px "Bricolage Grotesque",sans-serif;text-decoration:none;margin-right:auto}
 nav a.l{text-decoration:none;color:var(--mute);font-size:15px;font-weight:500}
 nav a.l:hover{color:var(--teal)}
-#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:20px;padding:5px 12px;font:500 14px Figtree,sans-serif;cursor:pointer}
+#theme{display:grid;place-items:center;width:40px;height:40px;padding:8px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:20px;cursor:pointer}
+#theme svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#theme .sun{display:none}
+:root[data-theme="dark"] #theme .sun{display:block}
+:root[data-theme="dark"] #theme .moon{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #theme .sun{display:block}:root:not([data-theme="light"]) #theme .moon{display:none}}
 .hero{padding:56px 0 20px;display:grid;grid-template-columns:1fr 230px;gap:36px;align-items:center}
 .hero h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.02em}
 .hero p.role{font-size:20px;color:var(--teal);font-weight:600;margin:10px 0 14px}
@@ -90,7 +95,10 @@ footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--mute);fo
 <body>
 <nav><div class="wrap"><a class="logo" href="#top">Harini M</a>
 <a class="l" href="#skills">Skills</a><a class="l" href="#experience">Experience</a><a class="l" href="#project">Project</a><a class="l" href="#education">Education</a><a class="l" href="#contact">Contact</a>
-<button id="theme" type="button" aria-label="Switch light or dark theme">Theme</button></div></nav>
+<button id="theme" type="button" aria-label="Toggle light and dark theme">
+<svg class="moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.2 15.8A8 8 0 0 1 8.2 3.8 8.5 8.5 0 1 0 20.2 15.8Z"/></svg>
+<svg class="sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+</button></div></nav>
 
 <main class="wrap" id="top">
 <div class="hero">
@@ -100,8 +108,12 @@ footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--mute);fo
 <p class="lead">I study how medicines are measured and kept reliable. My final-year work built a green, stability-indicating HPTLC method for dapagliflozin, and my experience runs from hospital pharmacy to a quality control laboratory.</p>
 <div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn s" href="https://www.linkedin.com/in/harini-m-200298442" target="_blank" rel="noopener">View LinkedIn</a></div>
 </div>
-<!-- Replace the src below with your real photo later -->
-<img class="photo" id="profile-photo" alt="Profile photo of Harini M (placeholder)" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 230 290'%3E%3Crect width='230' height='290' fill='%23DDF1F1'/%3E%3Ccircle cx='115' cy='108' r='46' fill='%230B7F83' opacity='.85'/%3E%3Cpath d='M28 290c0-62 38-100 87-100s87 38 87 100z' fill='%230B7F83' opacity='.85'/%3E%3C/svg%3E">
+<img
+    class="photo"
+    id="profile-photo"
+    alt="Profile photo of Harini"
+    src="profile_picture.png"
+>
 </div>
 
 <div class="chrom">
